@@ -14,7 +14,8 @@ def inicio():
 def conexion():
     try:
         con = mysql.connector.connect(
-            host="host.docker.internal",
+            #host="host.docker.internal", 
+            host="mysql",
             port=3306,
             user="root",
             password="123456",
