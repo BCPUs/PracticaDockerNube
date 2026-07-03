@@ -1,7 +1,7 @@
 services:
   mysql:
     image: mysql:8.0
-    container_name: mysqlserver2
+    container_name: mysqlserver
     restart: always
 
     environment:
@@ -13,9 +13,9 @@ services:
 
   app:
     build: .
-    container_name: pythonapp
+    container_name: pythonapp1
     ports:
-      -"8081:5000"
+      - "8081:5000"
 
     depends_on:
       - mysql
